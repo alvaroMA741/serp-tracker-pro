@@ -22,7 +22,6 @@
     a { color: var(--accent1); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── NAV ── */
     nav {
       display: flex; align-items: center; justify-content: space-between;
       padding: 18px 40px; border-bottom: 1px solid var(--border);
@@ -41,7 +40,6 @@
     }
     .nav-cta:hover { opacity: 0.9; text-decoration: none !important; }
 
-    /* ── HERO ── */
     .hero {
       max-width: 900px; margin: 0 auto; padding: 90px 24px 70px;
       text-align: center;
@@ -67,20 +65,19 @@
       background: linear-gradient(135deg, var(--accent1), var(--accent2));
       color: #fff; padding: 14px 28px; border-radius: 10px;
       font-size: 15px; font-weight: 600; border: none; cursor: pointer;
-      box-shadow: 0 4px 20px rgba(79,112,85,0.3);
-      transition: opacity 0.2s;
+      box-shadow: 0 4px 20px rgba(79,112,85,0.3); transition: opacity 0.2s;
+      display: inline-block;
     }
-    .btn-primary:hover { opacity: 0.9; text-decoration: none; }
+    .btn-primary:hover { opacity: 0.9; text-decoration: none; color: #fff; }
     .btn-secondary {
       background: #fff; color: var(--text); padding: 14px 28px;
       border-radius: 10px; font-size: 15px; font-weight: 600;
-      border: 1px solid var(--border); cursor: pointer;
-      transition: border-color 0.2s;
+      border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s;
+      display: inline-block;
     }
-    .btn-secondary:hover { border-color: var(--accent1); text-decoration: none; }
+    .btn-secondary:hover { border-color: var(--accent1); text-decoration: none; color: var(--text); }
     .hero-note { margin-top: 16px; font-size: 13px; color: var(--muted); }
 
-    /* ── POPUP MOCKUP ── */
     .mockup-wrap {
       max-width: 480px; margin: 60px auto 0;
       background: #e8e4dd; border-radius: 20px; padding: 32px;
@@ -88,8 +85,7 @@
     }
     .popup-mock {
       background: var(--bg); border-radius: 14px;
-      border: 1px solid var(--border); overflow: hidden;
-      font-size: 13px;
+      border: 1px solid var(--border); overflow: hidden; font-size: 13px;
     }
     .popup-inner { padding: 16px; }
     .popup-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
@@ -103,37 +99,27 @@
     .popup-input { flex:1; padding:8px 10px; border-radius:7px; border:1px solid var(--border); font-size:12px; background:#fff; font-family:inherit; }
     .popup-check { background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; border:none; border-radius:8px; padding:8px 12px; font-size:12px; font-weight:600; white-space:nowrap; font-family:inherit; cursor:pointer; }
     .popup-result { background: #f0f5f1; border-radius: 8px; padding: 10px 12px; }
-    .popup-pos { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+    .popup-pos { font-size: 13px; font-weight: 700; color: #4a7c59; margin-bottom: 4px; }
+    .popup-pos-prev { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
     .popup-url { font-size: 11px; color: var(--accent1); margin-bottom: 4px; word-break: break-all; }
     .popup-title-row { font-size: 11px; color: #4a4a4a; }
     .popup-title-row b { color: var(--muted); }
+    .popup-sep { font-size:10px; font-weight:600; color:var(--muted); letter-spacing:1px; border-top:1px solid var(--border); padding-top:6px; margin:8px 0 6px; }
 
-    /* ── FEATURES ── */
     .section { max-width: 960px; margin: 0 auto; padding: 80px 24px; }
     .section-label { font-size: 13px; font-weight: 600; color: var(--accent1); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
     .section h2 { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin-bottom: 16px; }
     .section p { font-size: 17px; color: var(--muted); line-height: 1.7; max-width: 580px; }
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 48px; }
-    .feature-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 14px; padding: 28px;
-      transition: box-shadow 0.2s;
-    }
+    .feature-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: box-shadow 0.2s; }
     .feature-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.07); }
     .feature-icon { font-size: 28px; margin-bottom: 14px; }
     .feature-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
     .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    /* ── PRICING ── */
     .pricing-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 48px; }
-    .plan {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 16px; padding: 32px;
-    }
-    .plan.pro {
-      background: var(--dark); border-color: var(--dark);
-      color: #f7f3ee;
-    }
+    .plan { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+    .plan.pro { background: var(--dark); border-color: var(--dark); color: #f7f3ee; }
     .plan-name { font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; color: var(--muted); }
     .plan.pro .plan-name { color: #9fc4a3; }
     .plan-price { font-size: 42px; font-weight: 700; letter-spacing: -1px; margin-bottom: 4px; }
@@ -146,40 +132,21 @@
     .plan-features li .cross { color: #c4bdb5; font-size: 16px; }
     .plan.pro .plan-features li { color: #e8e0d4; }
     .plan.pro .plan-features li .check { color: #9fc4a3; }
-    .plan-btn {
-      display: block; text-align: center; padding: 12px;
-      border-radius: 10px; font-weight: 600; font-size: 15px;
-      border: 1.5px solid var(--border); color: var(--text);
-      transition: all 0.2s;
-    }
+    .plan-btn { display: block; text-align: center; padding: 12px; border-radius: 10px; font-weight: 600; font-size: 15px; border: 1.5px solid var(--border); color: var(--text); transition: all 0.2s; }
     .plan-btn:hover { border-color: var(--accent1); color: var(--accent1); text-decoration: none; }
-    .plan-btn.pro-btn {
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
-      color: #fff; border: none;
-      box-shadow: 0 4px 20px rgba(79,112,85,0.4);
-    }
+    .plan-btn.pro-btn { background: linear-gradient(135deg, var(--accent1), var(--accent2)); color: #fff; border: none; box-shadow: 0 4px 20px rgba(79,112,85,0.4); }
     .plan-btn.pro-btn:hover { opacity: 0.9; color: #fff; }
 
-    /* ── FAQ ── */
     .faq-list { margin-top: 48px; display: flex; flex-direction: column; gap: 16px; }
     .faq-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
     .faq-item h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
     .faq-item p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    /* ── CTA FINAL ── */
-    .cta-section {
-      background: var(--dark); color: #f7f3ee;
-      text-align: center; padding: 80px 24px;
-    }
+    .cta-section { background: var(--dark); color: #f7f3ee; text-align: center; padding: 80px 24px; }
     .cta-section h2 { font-size: 36px; font-weight: 700; letter-spacing: -1px; margin-bottom: 16px; }
     .cta-section p { font-size: 17px; color: #9fc4a3; margin-bottom: 36px; }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--bg); border-top: 1px solid var(--border);
-      padding: 28px 40px; display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 12px;
-    }
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     footer p { font-size: 13px; color: var(--muted); }
     footer a { font-size: 13px; color: var(--muted); }
     footer a:hover { color: var(--text); }
@@ -195,10 +162,9 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-logo">
-      <img src="logo_store.png" alt="SERP Tracker Pro">
+      <img src="logo.png" alt="SERP Tracker Pro">
       <span>SERP Tracker Pro</span>
     </div>
     <div class="nav-links">
@@ -209,12 +175,8 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">
-      <span>🔍</span>
-      <span>Chrome Extension for SEO Professionals</span>
-    </div>
+    <div class="hero-badge"><span>🔍</span><span>Chrome Extension for SEO Professionals</span></div>
     <h1>Check your Google rankings<br><em>in real time</em></h1>
     <p class="hero-sub">Instantly see where any domain ranks in Google's top 100 organic results — directly from your browser. No API key, no monthly fees, no limits.</p>
     <div class="hero-btns">
@@ -223,7 +185,6 @@
     </div>
     <p class="hero-note">Free forever · Pro from €6.90 one-time</p>
 
-    <!-- Popup mockup -->
     <div class="mockup-wrap">
       <div class="popup-mock">
         <div class="popup-inner">
@@ -249,16 +210,19 @@
             <button class="popup-check">Check Rank</button>
           </div>
           <div class="popup-result">
-            <div class="popup-pos">Position #4 for 'seo tools'</div>
+            <div class="popup-pos">Position #4 ↑</div>
             <div class="popup-url">https://example.com/seo-tools-guide</div>
             <div class="popup-title-row"><b>Title: </b>The Best Free SEO Tools — Example.com</div>
+            <div class="popup-sep">PREVIOUS</div>
+            <div class="popup-pos-prev">Position #7</div>
+            <div class="popup-url" style="color:#b5aea5;">https://example.com/old-page</div>
+            <div class="popup-title-row" style="color:#b5aea5;"><b>Title: </b>SEO Tools Guide — Example.com</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FEATURES -->
   <section class="section" id="features">
     <div class="section-label">Features</div>
     <h2>Everything you need,<br>nothing you don't</h2>
@@ -272,7 +236,7 @@
       <div class="feature-card">
         <div class="feature-icon">🔗</div>
         <h3>Clickable ranking URL</h3>
-        <p>Go directly to the page that's ranking with one click. No copying, no pasting.</p>
+        <p>Go directly to the page that's ranking with one click. No copying, no pasting. Pro feature.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📋</div>
@@ -280,9 +244,14 @@
         <p>Download the full top 100 organic results as a clean CSV file with position, title, URL and domain.</p>
       </div>
       <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Position tracking</h3>
+        <p>Compare current vs previous ranking for the same domain and keyword. Green if improved, red if dropped. Pro feature.</p>
+      </div>
+      <div class="feature-card">
         <div class="feature-icon">🕐</div>
         <h3>Domain history</h3>
-        <p>Quick access to your last 7 checked domains. Full predictive search across your entire history. Pro feature.</p>
+        <p>Quick access to your last 7 checked domains. Full predictive search across your entire history. Import domains from a TXT file. Pro feature.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🏷️</div>
@@ -297,8 +266,7 @@
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="section" id="pricing" style="background:#fff; max-width:100%; padding: 80px 24px;">
+  <section style="background:#fff; padding: 80px 24px;" id="pricing">
     <div style="max-width:960px; margin:0 auto;">
       <div class="section-label">Pricing</div>
       <h2>Simple, honest pricing</h2>
@@ -314,7 +282,8 @@
             <li><span class="check">✓</span> Remember last domain</li>
             <li><span class="cross">–</span> Clickable ranking URL</li>
             <li><span class="cross">–</span> Page title</li>
-            <li><span class="cross">–</span> Domain history</li>
+            <li><span class="cross">–</span> Position tracking</li>
+            <li><span class="cross">–</span> Domain history & import</li>
           </ul>
           <a href="https://chromewebstore.google.com/detail/eolhclfnlbbiajghpknlfcfnapdhomai" target="_blank" class="plan-btn">Add to Chrome</a>
         </div>
@@ -326,17 +295,18 @@
             <li><span class="check">✓</span> Everything in Free</li>
             <li><span class="check">✓</span> Clickable ranking URL</li>
             <li><span class="check">✓</span> Page title of ranking page</li>
+            <li><span class="check">✓</span> Position tracking (↑↓ vs previous)</li>
             <li><span class="check">✓</span> Domain history (last 7)</li>
             <li><span class="check">✓</span> Full predictive search history</li>
+            <li><span class="check">✓</span> Import domains from TXT file</li>
             <li><span class="check">✓</span> One-click re-check from history</li>
           </ul>
-          <a href="https://seolong.lemonsqueezy.com" target="_blank" class="plan-btn pro-btn">Get Pro — €6.90</a>
+          <a href="https://payhip.com/b/VvA5J" target="_blank" class="plan-btn pro-btn">Get Pro — €6.90</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section" id="faq">
     <div class="section-label">FAQ</div>
     <h2>Common questions</h2>
@@ -350,6 +320,10 @@
         <p>Yes. Open any Google search results page on desktop, click the extension, enter a domain and hit Check Rank. It works with any keyword and any Google domain.</p>
       </div>
       <div class="faq-item">
+        <h3>How does position tracking work?</h3>
+        <p>Every time you check a domain for a keyword, the extension saves the result locally. The next time you check the same domain and keyword, it compares the positions and shows you if you've moved up (green ↑) or down (red ↓).</p>
+      </div>
+      <div class="faq-item">
         <h3>What does "2 activations" mean for Pro?</h3>
         <p>Your Pro license can be active on 2 devices simultaneously — for example your work computer and your laptop. You can deactivate and reactivate at any time.</p>
       </div>
@@ -359,24 +333,22 @@
       </div>
       <div class="faq-item">
         <h3>What data does the extension collect?</h3>
-        <p>Nothing is sent to our servers. Domain history and license key are stored locally in your browser. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+        <p>Nothing is sent to our servers. Domain history, position history and license key are stored locally in your browser. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
   <section class="cta-section">
     <h2>Start checking your rankings today</h2>
     <p>Free to install. No account needed. Works in seconds.</p>
-    <a href="https://chromewebstore.google.com/detail/eolhclfnlbbiajghpknlfcfnapdhomai" target="_blank" class="btn-primary" style="display:inline-block;">Add to Chrome — It's Free</a>
+    <a href="https://chromewebstore.google.com/detail/eolhclfnlbbiajghpknlfcfnapdhomai" target="_blank" class="btn-primary">Add to Chrome — It's Free</a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 SERP Tracker Pro. All rights reserved.</p>
     <div style="display:flex;gap:24px;">
       <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="https://seolong.lemonsqueezy.com" target="_blank">Buy Pro</a>
+      <a href="https://payhip.com/b/VvA5J" target="_blank">Buy Pro</a>
     </div>
   </footer>
 
